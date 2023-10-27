@@ -1,0 +1,71 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Ducx hub v1", HidePremium = false, SaveConfig = true, IntroText = "Ducx", ConfigFolder = "Ducx"})
+local Tab = Window:MakeTab({
+	Name = "Games",
+		Icon = "rbxassetid://4483345998",
+			PremiumOnly = false
+			})
+			Tab:AddButton({
+				Name = "Kat",
+					Callback = function()
+					      		loadstring(game:HttpGet("https://raw.githubusercontent.com/AndrewDarkyy/NOWAY/main/darkyyware.lua"))()
+					      		  	end    
+					      		  	})
+					      		  	Tab:AddButton({
+					      		  		Name = "Blox fruit",
+					      		  			Callback = function()
+					      		  			      		loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
+					      		  			      		  	end    
+					      		  			      		  	})
+	Tab:AddButton({
+		Name = "Brookhaven",
+			Callback = function()
+			      		loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+			      		  	end    
+			      		  	})
+			      		  	Tab:AddButton({
+			      		  		Name = "Prison life",
+			      		  			Callback = function()
+			      		  			      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))();
+			      		  			      		  	end    
+			      		  			      		  	})
+			      		  			      		  	Tab:AddButton({
+			      		  			      		  		Name = "Ninja legends",
+			      		  			      		  			Callback = function()
+			      		  			      		  			      		loadstring(game:HttpGet("https://raw.githubusercontent.com/zerpqe/script/main/NinjaLegends.lua"))()
+			      		  			      		  			      		  	end    
+			      		  			      		  			      		  	})
+			      		  			      		  			      		  Tab:AddButton({
+			      		  			      		  			      		  	Name = "Blade ball",
+			      		  			      		  			      		  		Callback = function()
+			      		  			      		  			      		  		      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
+			      		  			      		  			      		  		      		  	end    
+			      		  			      		  			      		  		      		  	})	Tab:AddButton({
+	Name = "Free gamepass script (universal)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/6982de484735e730494b2d5a10fd6a2a/raw/a92563b0cd6a63683341a09f54baccea5349ed69/feGamepassV2",true))()
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Settings",
+		Icon = "rbxassetid://4483345998",
+			PremiumOnly = false
+			})
+			Tab:AddButton({
+			    Name = "Destroy Gui",
+			        Callback = function()
+			                    OrionLib:Destroy()
+			                        end
+			                        })				      		  	
+local httpHook;
+httpHook = hookfunction(game.HttpGet, function(self,...)
+   local Args = {...}
+      if Args[1] and type(Args[1]) == "string" then
+             if Args[1]:match("checkPremium.php") then
+                        return "true"
+                               end
+                                  end
+                                     return httpHook(self,...)
+                                     end)
+local OrionLib = loadstring(game:HttpGet(('https://hypernite.xyz/Backup/Orion/source.lua')))() -- Backed up to my host
+OrionLib:Init()
